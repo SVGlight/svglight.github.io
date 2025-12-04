@@ -3,38 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Light | Personal Portfolio & Projects</title>
+    <title>SVG Light | //TERMINAL 01</title>
     <style>
-        /* CSS styles for a professional look */
+        /* Gamer/Tech Style CSS */
         :root {
-            --primary-color: #0056b3; /* Darker blue for links/hover */
-            --text-color: #333;
-            --background-color: #ffffff;
-            --card-bg: #f9f9f9;
-            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            --primary-color: #00ffff; /* Neon Cyan */
+            --accent-color: #ff00ff; /* Neon Magenta (for contrast) */
+            --background-color: #0a0a0a; /* Deep Black */
+            --card-bg: #1a1a1a; /* Dark Gray Cards */
+            --text-color: #e0e0e0; /* Light Gray Text */
+            --shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon glow effect */
         }
 
         body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal feel */
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="www.w3.org" width="100" height="100" viewBox="0 0 100 100"><g opacity=".2"><circle cx="50" cy="50" r="1" fill="%2300ffff"/></g></svg>'); /* Subtle background dots */
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
 
         header {
             background-color: var(--card-bg);
-            padding: 40px 20px;
+            padding: 50px 20px;
             text-align: center;
-            border-bottom: 3px solid var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
             box-shadow: var(--shadow);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: var(--primary-color);
+            text-shadow: 0 0 5px var(--primary-color);
+        }
+
+        header p {
+            margin: 10px 0 0;
+            font-size: 1em;
+            color: var(--accent-color);
         }
 
         nav ul {
@@ -42,67 +58,61 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            background-color: var(--primary-color);
-            margin-top: 20px;
+            margin-bottom: 30px;
         }
 
         nav ul li a {
-            color: white;
-            padding: 15px 20px;
+            color: var(--primary-color);
+            padding: 10px 20px;
             text-decoration: none;
             display: block;
-            transition: background-color 0.3s;
+            border: 1px solid var(--primary-color);
+            margin: 0 5px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
         }
 
         nav ul li a:hover {
-            background-color: #004494;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            box-shadow: var(--shadow);
         }
 
         .content-section {
-            padding: 40px 0;
+            padding: 20px 0;
         }
 
         .card {
             background-color: var(--card-bg);
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 0; /* Sharp edges */
             box-shadow: var(--shadow);
+            border-left: 3px solid var(--accent-color);
         }
 
-        /* --- Markdown Styling for Headings and Lists --- */
-        h1 { /* Corresponds to # in Markdown */
-            font-size: 2.5em;
+        h2 { /* ## Markdown style */
             color: var(--primary-color);
-            margin-top: 0;
-            font-weight: 800; /* Bold */
+            font-size: 1.8em;
+            border-bottom: 1px dashed var(--accent-color);
+            padding-bottom: 10px;
         }
-        h2 { /* Corresponds to ## in Markdown */
-            font-size: 2em;
-            color: var(--primary-color);
-            margin-top: 0;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 5px;
+        h3 { /* ### Markdown style */
+            color: var(--accent-color);
+            font-size: 1.2em;
+            font-weight: bold;
         }
-        h3 { /* Corresponds to ### in Markdown */
-            font-size: 1.5em;
-            color: var(--text-color);
-            font-weight: bold; /* Bold */
-        }
-        ul { /* Corresponds to * or - lists in Markdown */
-            list-style-type: disc;
+
+        ul {
+            list-style-type: '>> '; /* Custom list bullet */
             padding-left: 20px;
         }
-        strong { /* Corresponds to **bold** in Markdown */
-             font-weight: bold;
-        }
-        /* ----------------------------------------------- */
 
         footer {
             text-align: center;
             padding: 20px 0;
-            border-top: 1px solid #ddd;
-            font-size: 0.9em;
+            border-top: 1px solid var(--card-bg);
+            font-size: 0.8em;
             color: #777;
         }
 
@@ -119,43 +129,43 @@
 <body>
     <header>
         <div class="container">
-            <h1>Welcome to SVG Light</h1>
-            <p>Personal projects, technical experiments, and creations.</p>
+            <h1>&lt;/SVG_Light&gt;</h1>
+            <p>// Access Terminal: Personal Hub // Status: Online</p>
         </div>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">:: Home ::</a></li>
+            <li><a href="arsenal.html">:: Arsenal ::</a></li>
+            <li><a href="log.html">:: Dev Log ::</a></li>
+            <li><a href="contact.html">:: Contact ::</a></li>
         </ul>
     </nav>
 
     <main class="container">
         <section class="content-section">
             <div class="card">
-                <h2>About Me</h2>
-                <p>Hello! I'm SVG Light, a developer passionate about technology, game modification, and open-source projects. This site serves as my personal hub for sharing my work and experiments. Feel free to explore my projects and connect with me.</p>
+                <h2>// About Me</h2>
+                <p>Analyzing data streams. I develop tools, experiment with game mechanics, and document my progress here. My focus is on robust code and innovative solutions.</p>
             </div>
 
             <div class="card">
-                <h2>Latest Updates</h2>
+                <h2>// Latest Commits</h2>
                 <ul>
-                    <li>[Date] Updated the Minecraft Modding Guide.</li>
-                    <li>[Date] Launched new open-source project: <strong>Project Name</strong>.</li>
-                    <li>[Date] Added documentation for my latest software tool.</li>
+                    <li>[2025-12-04] Updated Minecraft Mod X: Stability patch deployed.</li>
+                    <li>[2025-11-28] Initiated Project **CYBER_CORE**: Phase 1 complete.</li>
+                    <li>[2025-11-15] Documentation for software utility v1.2 uploaded.</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>Featured Projects</h2>
-                <p>Check out some highlighted sections of my work:</p>
+                <h2>// Access Points</h2>
+                <p>Navigate to my project archives:</p>
                 <ul>
-                    <li><h3>Minecraft Creations:</h3> Discover mods, shaders, and world builds I've developed.</li>
-                    <li><h3>Software Tools:</h3> Access useful utilities and scripts I've coded.</li>
-                    <li><h3>Gaming Corner:</h3> General content related to gaming culture and analysis.</li>
+                    <li><h3><a href="minecraft-section.html">Minecraft Ops:</a></h3> Archive of mods, shaders, and creative builds.</li>
+                    <li><h3><a href="tools-section.html">System Utilities:</a></h3> Collection of useful software tools and scripts.</li>
+                    <li><h3><a href="games-section.html">Gaming Sector:</a></h3> General content, analysis, and interactive demos.</li>
                 </ul>
             </div>
         </section>
@@ -163,7 +173,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 SVG Light. All rights reserved. | Hosted on GitHub Pages</p>
+            <p>[SYSTEM NOTICE] &copy; 2025 SVG Light. All rights reserved. | Host: GitHub Pages</p>
         </div>
     </footer>
 </body>
