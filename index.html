@@ -3,54 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SVG Light | //TERMINAL 01</title>
+    <title>SVG Light // Home</title>
     <style>
-        /* Gamer/Tech Style CSS */
+        /* Minimalist Dark Mode CSS */
         :root {
-            --primary-color: #00ffff; /* Neon Cyan */
-            --accent-color: #ff00ff; /* Neon Magenta (for contrast) */
-            --background-color: #0a0a0a; /* Deep Black */
-            --card-bg: #1a1a1a; /* Dark Gray Cards */
-            --text-color: #e0e0e0; /* Light Gray Text */
-            --shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon glow effect */
+            --primary-color: #007bff; /* A standard, professional blue for accents */
+            --text-color: #e0e0e0;
+            --background-color: #121212; /* Very dark background */
+            --card-bg: #1e1e1e; /* Slightly lighter dark for content blocks */
+            --shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            --border-color: #333;
         }
 
         body {
-            font-family: 'Courier New', Courier, monospace; /* Monospaced font for terminal feel */
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: var(--background-color);
             color: var(--text-color);
             line-height: 1.6;
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="www.w3.org" width="100" height="100" viewBox="0 0 100 100"><g opacity=".2"><circle cx="50" cy="50" r="1" fill="%2300ffff"/></g></svg>'); /* Subtle background dots */
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
         }
 
         header {
-            background-color: var(--card-bg);
-            padding: 50px 20px;
+            padding: 60px 20px;
             text-align: center;
-            border-bottom: 2px solid var(--primary-color);
-            box-shadow: var(--shadow);
-            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
         }
 
         header h1 {
             margin: 0;
             font-size: 3em;
+            color: var(--text-color);
+            font-weight: 700;
+        }
+
+        header h1 span {
             color: var(--primary-color);
-            text-shadow: 0 0 5px var(--primary-color);
         }
 
         header p {
             margin: 10px 0 0;
-            font-size: 1em;
-            color: var(--accent-color);
+            font-size: 1.1em;
+            color: #aaa;
         }
 
         nav ul {
@@ -58,60 +59,59 @@
             padding: 0;
             display: flex;
             justify-content: center;
-            margin-bottom: 30px;
-        }
-
-        nav ul li a {
-            color: var(--primary-color);
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-            border: 1px solid var(--primary-color);
-            margin: 0 5px;
-            transition: background-color 0.3s, box-shadow 0.3s;
-            text-transform: uppercase;
-        }
-
-        nav ul li a:hover {
-            background-color: var(--primary-color);
-            color: var(--background-color);
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            margin-bottom: 40px;
             box-shadow: var(--shadow);
         }
 
-        .content-section {
-            padding: 20px 0;
+        nav ul li a {
+            color: var(--text-color);
+            padding: 15px 25px;
+            text-decoration: none;
+            display: block;
+            transition: color 0.3s, background-color 0.3s;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            color: white;
+            background-color: var(--primary-color);
         }
 
         .card {
             background-color: var(--card-bg);
-            padding: 25px;
-            margin-bottom: 25px;
-            border-radius: 0; /* Sharp edges */
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 8px;
             box-shadow: var(--shadow);
-            border-left: 3px solid var(--accent-color);
+            border-left: 4px solid var(--primary-color);
         }
 
         h2 { /* ## Markdown style */
             color: var(--primary-color);
             font-size: 1.8em;
-            border-bottom: 1px dashed var(--accent-color);
-            padding-bottom: 10px;
+            margin-bottom: 15px;
         }
         h3 { /* ### Markdown style */
-            color: var(--accent-color);
+            color: var(--text-color);
             font-size: 1.2em;
-            font-weight: bold;
+            font-weight: 600;
         }
 
         ul {
-            list-style-type: '>> '; /* Custom list bullet */
+            list-style-type: disc;
             padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
         }
 
         footer {
             text-align: center;
             padding: 20px 0;
-            border-top: 1px solid var(--card-bg);
+            border-top: 1px solid var(--border-color);
             font-size: 0.8em;
             color: #777;
         }
@@ -129,43 +129,43 @@
 <body>
     <header>
         <div class="container">
-            <h1>&lt;/SVG_Light&gt;</h1>
-            <p>// Access Terminal: Personal Hub // Status: Online</p>
+            <h1>SVG<span>Light</span>.github.io</h1>
+            <p>Developer Portfolio | Project Hub | Technical Experiments</p>
         </div>
     </header>
 
     <nav>
         <ul>
-            <li><a href="index.html">:: Home ::</a></li>
-            <li><a href="arsenal.html">:: Arsenal ::</a></li>
-            <li><a href="log.html">:: Dev Log ::</a></li>
-            <li><a href="contact.html">:: Contact ::</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <main class="container">
         <section class="content-section">
             <div class="card">
-                <h2>// About Me</h2>
-                <p>Analyzing data streams. I develop tools, experiment with game mechanics, and document my progress here. My focus is on robust code and innovative solutions.</p>
+                <h2>About</h2>
+                <p>Welcome to my personal project hub. I focus on software development, creative game modifications, and exploring new technologies. This site showcases my work and provides access to useful resources.</p>
             </div>
 
             <div class="card">
-                <h2>// Latest Commits</h2>
+                <h2>Updates</h2>
                 <ul>
-                    <li>[2025-12-04] Updated Minecraft Mod X: Stability patch deployed.</li>
-                    <li>[2025-11-28] Initiated Project **CYBER_CORE**: Phase 1 complete.</li>
-                    <li>[2025-11-15] Documentation for software utility v1.2 uploaded.</li>
+                    <li>[Date] Launched new open-source utility: <strong>Project Alpha</strong>.</li>
+                    <li>[Date] Posted new article: "Advanced Shaders in Minecraft 1.20".</li>
+                    <li>[Date] Updated documentation for all public tools.</li>
                 </ul>
             </div>
 
             <div class="card">
-                <h2>// Access Points</h2>
-                <p>Navigate to my project archives:</p>
+                <h2>Explore</h2>
+                <p>Browse the main sections of this site:</p>
                 <ul>
-                    <li><h3><a href="minecraft-section.html">Minecraft Ops:</a></h3> Archive of mods, shaders, and creative builds.</li>
-                    <li><h3><a href="tools-section.html">System Utilities:</a></h3> Collection of useful software tools and scripts.</li>
-                    <li><h3><a href="games-section.html">Gaming Sector:</a></h3> General content, analysis, and interactive demos.</li>
+                    <li><h3><a href="minecraft.html">Minecraft Section:</a></h3> Mods, tools, and world designs.</li>
+                    <li><h3><a href="tools.html">Tools & Utilities:</a></h3> My personal software development tools.</li>
+                    <li><h3><a href="gaming.html">Gaming Corner:</a></h3> General information and game-related content.</li>
                 </ul>
             </div>
         </section>
@@ -173,7 +173,7 @@
 
     <footer>
         <div class="container">
-            <p>[SYSTEM NOTICE] &copy; 2025 SVG Light. All rights reserved. | Host: GitHub Pages</p>
+            <p>&copy; 2025 SVG Light. All rights reserved. | Hosted securely via GitHub Pages.</p>
         </div>
     </footer>
 </body>
