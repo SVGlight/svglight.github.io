@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Light | Personal Portfolio & Projects</title>
+    <style>
+        /* CSS styles for a professional look */
+        :root {
+            --primary-color: #0056b3; /* Darker blue for links/hover */
+            --text-color: #333;
+            --background-color: #ffffff;
+            --card-bg: #f9f9f9;
+            --shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--background-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background-color: var(--card-bg);
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid var(--primary-color);
+            box-shadow: var(--shadow);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            background-color: var(--primary-color);
+            margin-top: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #004494;
+        }
+
+        .content-section {
+            padding: 40px 0;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        /* --- Markdown Styling for Headings and Lists --- */
+        h1 { /* Corresponds to # in Markdown */
+            font-size: 2.5em;
+            color: var(--primary-color);
+            margin-top: 0;
+            font-weight: 800; /* Bold */
+        }
+        h2 { /* Corresponds to ## in Markdown */
+            font-size: 2em;
+            color: var(--primary-color);
+            margin-top: 0;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        h3 { /* Corresponds to ### in Markdown */
+            font-size: 1.5em;
+            color: var(--text-color);
+            font-weight: bold; /* Bold */
+        }
+        ul { /* Corresponds to * or - lists in Markdown */
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        strong { /* Corresponds to **bold** in Markdown */
+             font-weight: bold;
+        }
+        /* ----------------------------------------------- */
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Welcome to SVG Light</h1>
+            <p>Personal projects, technical experiments, and creations.</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="content-section">
+            <div class="card">
+                <h2>About Me</h2>
+                <p>Hello! I'm SVG Light, a developer passionate about technology, game modification, and open-source projects. This site serves as my personal hub for sharing my work and experiments. Feel free to explore my projects and connect with me.</p>
+            </div>
+
+            <div class="card">
+                <h2>Latest Updates</h2>
+                <ul>
+                    <li>[Date] Updated the Minecraft Modding Guide.</li>
+                    <li>[Date] Launched new open-source project: <strong>Project Name</strong>.</li>
+                    <li>[Date] Added documentation for my latest software tool.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>Featured Projects</h2>
+                <p>Check out some highlighted sections of my work:</p>
+                <ul>
+                    <li><h3>Minecraft Creations:</h3> Discover mods, shaders, and world builds I've developed.</li>
+                    <li><h3>Software Tools:</h3> Access useful utilities and scripts I've coded.</li>
+                    <li><h3>Gaming Corner:</h3> General content related to gaming culture and analysis.</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SVG Light. All rights reserved. | Hosted on GitHub Pages</p>
+        </div>
+    </footer>
+</body>
+</html>
