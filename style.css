@@ -107,6 +107,7 @@ footer {
     border-top: 1px solid var(--border-color);
     font-size: 0.8em;
     color: #777;
+    position: relative; /* Added position relative here as discussed */
 }
 
 a {
@@ -124,11 +125,6 @@ a:hover {
     font-size: 0.8em;
     color: #777;
     margin-bottom: 10px;
-}
-
-/* Ensure footer has positioning context */
-footer {
-    position: relative; 
 }
 
 /* --- New Styles for Invisible Target and Keypad Modal --- */
