@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SVG Light // Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
     <header>
@@ -55,15 +55,15 @@
         <div class="container">
             <p>&copy; 2025 SVG Light. All rights reserved. | Hosted securely via GitHub Pages.</p>
         </div>
-        <!-- The new 'unlock' button -->
-        <button id="unlock-button" onclick="openKeypad()">Unlock</button>
+        <!-- The invisible click target -->
+        <div id="access-target" onclick="openKeypad()"></div>
     </footer>
 
     <!-- Keypad Modal Structure -->
     <div id="keypad-modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeKeypad()">&times;</span>
-            <h2>Enter Code</h2>
+            <h2>Enter Security Code</h2>
             <input type="password" id="code-input" readonly>
             <div class="keypad-grid">
                 <button onclick="pressKey('1')">1</button>
