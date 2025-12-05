@@ -55,6 +55,36 @@
         <div class="container">
             <p>&copy; 2025 SVG Light. All rights reserved. | Hosted securely via GitHub Pages.</p>
         </div>
+        <!-- The new 'unlock' button -->
+        <button id="unlock-button" onclick="openKeypad()">Unlock</button>
     </footer>
+
+    <!-- Keypad Modal Structure -->
+    <div id="keypad-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeKeypad()">&times;</span>
+            <h2>Enter Code</h2>
+            <input type="password" id="code-input" readonly>
+            <div class="keypad-grid">
+                <button onclick="pressKey('1')">1</button>
+                <button onclick="pressKey('2')">2</button>
+                <button onclick="pressKey('3')">3</button>
+                <button onclick="pressKey('4')">4</button>
+                <button onclick="pressKey('5')">5</button>
+                <button onclick="pressKey('6')">6</button>
+                <button onclick="pressKey('7')">7</button>
+                <button onclick="pressKey('8')">8</button>
+                <button onclick="pressKey('9')">9</button>
+                <button onclick="pressKey('*')">*</button>
+                <button onclick="pressKey('0')">0</button>
+                <button onclick="pressKey('#')">#</button>
+                <button id="enter-button" onclick="checkCode()">Enter</button>
+                <button id="clear-button" onclick="clearInput()">Clear</button>
+            </div>
+            <p id="error-message"></p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
 </body>
 </html>
