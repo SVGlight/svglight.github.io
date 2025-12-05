@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Fabric Mods // SVG Light</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>SVG<span>Light</span>.github.io</h1>
+            <p>Developer Portfolio | Project Hub | Technical Experiments</p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li class="active"><a href="fabric_minecraft_mods.html">Minecraft Fabric Mods Guide</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section class="content-section">
+            <div class="card">
+                <h2>Guide: Installing Minecraft Fabric Mods</h2>
+                <p>This guide will walk you through setting up your Minecraft Java Edition client to use Fabric mods.</p>
+                
+                <p><strong>⚠️ YOU NEED A WINDOWS COMPUTER WITH MINECRAFT JAVA FOR THIS.</strong></p>
+                <p>If you don't own the game yet, you can purchase it here: <a href="https://www.minecraft.net/en-us/store/minecraft-deluxe-collection-pc">Purchase Minecraft Java Edition</a></p>
+
+                <h3>Step 1: Install Java (JRE)</h3>
+                <p>
+                    First, you must install the Java Runtime Environment (JRE) on your computer. Minecraft mods are written in Java, and this software allows your computer to run the `.jar` files used by both the mod installer and the mods themselves.
+                </p>
+                <p>
+                    <a href="https://javadl.oracle.com/webapps/download/AutoDL?BundleId=252625_99a6cb9582554a09bd4ac60f73f9b8e6">Download Java (Windows Offline 64-bit)</a>
+                </p>
+
+                <h3>Step 2: Install the Fabric Mod Loader</h3>
+                <p>
+                    The Fabric installer modifies your Minecraft client installation to make it compatible with the Fabric mod ecosystem.
+                </p>
+                <p>
+                    Install the Fabric installer using the link below. Once downloaded, run the `.jar` file and follow the on-screen instructions to create a new Fabric profile in your Minecraft Launcher.
+                </p>
+                <p>
+                    <a href="https://maven2.fabricmc.net/net/fabricmc/fabric-installer/1.1.0/fabric-installer-1.1.0.jar">Download Fabric Installer (Universal .JAR)</a>
+                </p>
+
+                <h3>Step 3: Download Your Mods</h3>
+                <p>
+                    You can find a wide variety of Fabric-compatible mods on Modrinth.
+                </p>
+                <p>
+                    <a href="https://modrinth.com/mods">Browse Mods on Modrinth</a>
+                </p>
+                <p>
+                    When downloading, make sure you use the sidebar filters on Modrinth to select "Fabric" as the loader and choose the specific Minecraft version you installed in Step 2.
+                </p>
+
+                <h3>Step 4: Understand Dependencies and Libraries</h3>
+                <p>
+                    Many powerful mods rely on separate "library" or "API" mods to function. These required files must also be present in your Minecraft `mods` folder.
+                </p>
+                <p>
+                    For instance, **most Fabric mods require the Fabric API itself** to be in your `mods` folder, alongside the main mods you downloaded. The Fabric API can also be downloaded from the Modrinth link above. Always check the "Dependencies" or "Required Mods" section on a mod's download page for a complete list of necessary library files.
+                </p>
+                <p>
+                    Once all `.jar` files are downloaded, place them into your Minecraft `mods` folder (usually located at `C:\Users\YourName\AppData\Roaming\.minecraft\mods`).
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 SVG Light. All rights reserved. | Hosted securely via GitHub Pages.</p>
+        </div>
+    </footer>
+</body>
+</html>
