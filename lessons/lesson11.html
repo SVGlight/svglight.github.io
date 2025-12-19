@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 11 - ES6 Modules | FullStack Lessons</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://img.sanishtech.com/u/bab806d4f8ab8698339bec1a89ee9.png">
+
+  <!-- Google AdSense Verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9292514961115879"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Lesson 11: ES6 Modules</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Lessons</h2>
+      <ul>
+        <li><a href="lesson1.html">Lesson 1: HTML Basics</a></li>
+        <li><a href="lesson2.html">Lesson 2: CSS Basics</a></li>
+        <li><a href="lesson3.html">Lesson 3: Advanced CSS (Flexbox & Grid)</a></li>
+        <li><a href="lesson4.html">Lesson 4: JavaScript Basics</a></li>
+        <li><a href="lesson5.html">Lesson 5: DOM Manipulation</a></li>
+        <li><a href="lesson6.html">Lesson 6: Events & Event Listeners</a></li>
+        <li><a href="lesson7.html">Lesson 7: Functions & Scope</a></li>
+        <li><a href="lesson8.html">Lesson 8: Arrays & Objects</a></li>
+        <li><a href="lesson9.html">Lesson 9: API Requests & Fetch</a></li>
+        <li><a href="lesson10.html">Lesson 10: Async/Await</a></li>
+        <li><a href="lesson11.html">Lesson 11: ES6 Modules</a></li>
+        <li><a href="lesson12.html">Lesson 12: Local Storage & Cookies</a></li>
+        <li><a href="lesson13.html">Lesson 13: Responsive Design</a></li>
+        <li><a href="lesson14.html">Lesson 14: CSS Animations & Transitions</a></li>
+        <li><a href="lesson15.html">Lesson 15: Putting It All Together</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <p>Welcome to Lesson 11! ES6 Modules are a major advancement in JavaScript that allow you to split your code into multiple files and import/export functionality between them. This promotes modularity, maintainability, and clean project structure. Before ES6 Modules, developers often relied on patterns like IIFEs or libraries such as RequireJS for modularity.</p>
+
+        <p>With ES6, you can now explicitly export variables, functions, and classes from one file and import them into another. This allows you to separate logic into meaningful files, such as one for utility functions, one for API requests, and another for DOM manipulation.</p>
+
+        <p>Here’s a simple example. Suppose you have a file called <code>mathUtils.js</code>:</p>
+
+        <pre><code>// mathUtils.js
+export function add(a, b) {
+  return a + b;
+}
+
+export function multiply(a, b) {
+  return a * b;
+}</code></pre>
+
+        <p>You can then import these functions in another file, <code>main.js</code>:</p>
+
+        <pre><code>// main.js
+import { add, multiply } from './mathUtils.js';
+
+console.log(add(5, 3));      // 8
+console.log(multiply(4, 7)); // 28</code></pre>
+
+        <p>Notice the use of curly braces in the import statement. These are named exports, which means you have to import them using the exact names defined in the source file. Alternatively, you can have a <strong>default export</strong>:</p>
+
+        <pre><code>// greetings.js
+export default function greet(name) {
+  console.log("Hello, " + name + "!");
+}
+
+// main.js
+import greet from './greetings.js';
+greet("Alice");</code></pre>
+
+        <p>Using modules also allows you to keep your global namespace clean, avoiding collisions between variables and functions. Since each module has its own scope, variables declared inside a module are not automatically added to the global window object.</p>
+
+        <p>Modules can also import other modules, enabling hierarchical project structures. For example:</p>
+
+        <pre><code>// api.js
+export async function fetchUsers() {
+  const response = await fetch("/users");
+  return response.json();
+}
+
+// main.js
+import { fetchUsers } from './api.js';
+fetchUsers().then(users =&gt; console.log(users));</code></pre>
+
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <p>To use modules in the browser, make sure your script tag includes <code>type="module"</code>:</p>
+
+        <pre><code>&lt;script type="module" src="main.js"&gt;&lt;/script&gt;</code></pre>
+
+        <p>This ensures the browser treats the file as a module, enabling the import/export syntax. Additionally, modules are deferred by default, so you don’t need to add the <code>defer</code> attribute.</p>
+
+        <p>Modules are widely used in modern frameworks like React, Vue, and Node.js projects, making them a crucial skill for any developer who wants to maintain scalable and organized codebases.</p>
+
+        <p>Practice exercises include creating utility modules for math operations, creating API helper modules, and building a small project split across multiple files to experience modularity firsthand.</p>
+
+        <p>By the end of this lesson, you should be able to:</p>
+        <ul>
+          <li>Understand the purpose of ES6 modules</li>
+          <li>Create named and default exports</li>
+          <li>Import modules in other files</li>
+          <li>Maintain modular and organized code</li>
+          <li>Use modules to structure larger projects</li>
+        </ul>
+
+        <p>Next, we will explore Local Storage & Cookies, which allow you to persist user data in the browser for personalization and state management.</p>
+      </section>
+
+      <div class="next-lesson">
+        <a href="lesson12.html">
+          Next Lesson: Local Storage & Cookies <span class="arrow">→</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FullStack Lessons</p>
+  </footer>
+</body>
+</html>
