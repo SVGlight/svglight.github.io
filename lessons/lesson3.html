@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 3 - Advanced CSS (Flexbox & Grid) | FullStack Lessons</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://img.sanishtech.com/u/bab806d4f8ab8698330839bec1a89ee9.png">
+
+  <!-- Google AdSense Verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9292514961115879"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Lesson 3: Advanced CSS (Flexbox & Grid)</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Lessons</h2>
+      <ul>
+        <li><a href="lesson1.html">Lesson 1: HTML Basics</a></li>
+        <li><a href="lesson2.html">Lesson 2: CSS Basics</a></li>
+        <li><a href="lesson3.html">Lesson 3: Advanced CSS (Flexbox & Grid)</a></li>
+        <li><a href="lesson4.html">Lesson 4: JavaScript Basics</a></li>
+        <li><a href="lesson5.html">Lesson 5: DOM Manipulation</a></li>
+        <li><a href="lesson6.html">Lesson 6: Events & Event Listeners</a></li>
+        <li><a href="lesson7.html">Lesson 7: Functions & Scope</a></li>
+        <li><a href="lesson8.html">Lesson 8: Arrays & Objects</a></li>
+        <li><a href="lesson9.html">Lesson 9: API Requests & Fetch</a></li>
+        <li><a href="lesson10.html">Lesson 10: Async/Await</a></li>
+        <li><a href="lesson11.html">Lesson 11: ES6 Modules</a></li>
+        <li><a href="lesson12.html">Lesson 12: Local Storage & Cookies</a></li>
+        <li><a href="lesson13.html">Lesson 13: Responsive Design</a></li>
+        <li><a href="lesson14.html">Lesson 14: CSS Animations & Transitions</a></li>
+        <li><a href="lesson15.html">Lesson 15: Putting It All Together</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <p>Welcome to Lesson 3! Now that you are familiar with CSS basics, it’s time to explore advanced layout techniques that give you full control over your web pages. In this lesson, we will dive deep into Flexbox and CSS Grid, two modern CSS modules designed to simplify complex layouts and make your pages responsive and visually appealing.</p>
+
+        <p>Flexbox, short for “Flexible Box Layout,” is a one-dimensional layout system that helps align and distribute space among items in a container, even when their sizes are unknown or dynamic. It excels at organizing elements in a row or column and handling spacing, alignment, and distribution efficiently.</p>
+
+        <p>To use Flexbox, you first define a container with <code>display: flex;</code>. This makes all its direct children flex items. For example:</p>
+
+        <pre><code>.container {
+  display: flex;
+}</code></pre>
+
+        <p>Once a container is a flex container, you can control the layout using several important properties:</p>
+        <ul>
+          <li><strong>flex-direction:</strong> Determines the main axis (<code>row</code>, <code>row-reverse</code>, <code>column</code>, <code>column-reverse</code>).</li>
+          <li><strong>justify-content:</strong> Aligns items along the main axis (<code>flex-start</code>, <code>center</code>, <code>space-between</code>, <code>space-around</code>, <code>space-evenly</code>).</li>
+          <li><strong>align-items:</strong> Aligns items along the cross axis (<code>stretch</code>, <code>flex-start</code>, <code>center</code>, <code>baseline</code>, <code>flex-end</code>).</li>
+          <li><strong>align-content:</strong> Aligns rows of flex items when there is extra space.</li>
+          <li><strong>flex-wrap:</strong> Allows items to wrap onto multiple lines (<code>nowrap</code>, <code>wrap</code>, <code>wrap-reverse</code>).</li>
+        </ul>
+
+        <p>Flex items also have their own properties:</p>
+        <ul>
+          <li><strong>order:</strong> Controls the order of items.</li>
+          <li><strong>flex-grow:</strong> Defines how much a flex item should grow relative to others.</li>
+          <li><strong>flex-shrink:</strong> Defines how an item should shrink if space is limited.</li>
+          <li><strong>flex-basis:</strong> Sets the initial main size of the item before growing or shrinking.</li>
+          <li><strong>align-self:</strong> Overrides <code>align-items</code> for a specific item.</li>
+        </ul>
+
+        <p>For example, imagine creating a navigation bar where links are evenly spaced:</p>
+
+        <pre><code>nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #2c3e50;
+}</code></pre>
+
+        <p>Flexbox simplifies responsive design as well. Items automatically adjust their size and position when the container’s width changes. For instance, using <code>flex-wrap: wrap;</code> ensures items move to the next line on smaller screens.</p>
+
+        <p>CSS Grid, on the other hand, is a two-dimensional layout system. It allows you to define rows and columns and place elements precisely within this grid. Grid is perfect for complex layouts that were difficult or required hacks using older CSS methods like floats and positioning.</p>
+
+        <p>To create a grid container, use <code>display: grid;</code>. Then you define rows and columns using <code>grid-template-columns</code> and <code>grid-template-rows</code>:</p>
+
+        <pre><code>.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
+  gap: 20px;
+}</code></pre>
+
+        <p>Here, <code>repeat(3, 1fr)</code> creates three equal columns. The <code>gap</code> property sets spacing between rows and columns. Grid items are automatically placed in the cells in order, but you can also explicitly position them using:</p>
+
+        <pre><code>.item1 {
+  grid-column: 1 / 3;
+  grid-row: 1;
+}</code></pre>
+
+        <p>This places <code>.item1</code> across columns 1 and 2 in row 1. Grid allows for precise layouts like magazines, dashboards, and card layouts with minimal code.</p>
+
+        <p>Both Flexbox and Grid have unique strengths. Flexbox is excellent for simple, linear layouts and aligning items along a single axis. Grid is ideal for more complex, two-dimensional layouts. In practice, many developers use both together to achieve flexible and structured designs.</p>
+
+        <p>Responsive design is easy with Grid. You can define different column layouts for different screen sizes using media queries:</p>
+
+        <pre><code>@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}</code></pre>
+
+        <p>This ensures that a multi-column layout on desktop collapses into a single column on smaller devices, improving readability and usability.</p>
+
+        <p>Other useful grid properties include <code>grid-auto-rows</code>, <code>grid-auto-flow</code>, <code>justify-items</code>, <code>align-items</code>, <code>justify-content</code>, and <code>align-content</code>. These allow you to control how items are aligned, stretched, or spaced within the grid container.</p>
+
+        <p>Flexbox and Grid can be combined to create powerful, responsive layouts. For example, a grid container can house multiple flex containers for individual sections, allowing you to manage both the overall layout and the internal alignment of components. This hybrid approach is widely used in modern web development frameworks and real-world projects.</p>
+
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <p>Practical exercises include creating a responsive gallery with Grid, a navigation bar with Flexbox, or a dashboard combining both. Experiment with gaps, alignment, and different grid-template configurations. Pay attention to how your layout behaves on mobile devices, tablets, and desktops.</p>
+
+        <p>Understanding Flexbox and Grid not only simplifies layout design but also reduces the need for complex CSS hacks like floats and manual positioning. It makes your code cleaner, easier to maintain, and future-proof. Websites built with modern layout techniques are faster to develop, easier to modify, and more accessible.</p>
+
+        <p>By the end of this lesson, you should be comfortable with:</p>
+        <ul>
+          <li>Creating flex containers and using flex properties to align and distribute items</li>
+          <li>Using flex-wrap, justify-content, align-items, and align-self for responsive layouts</li>
+          <li>Creating grid containers and defining columns, rows, and gaps</li>
+          <li>Placing items explicitly in grid cells and using grid auto-placement</li>
+          <li>Combining Flexbox and Grid for hybrid layouts</li>
+          <li>Making layouts responsive with media queries</li>
+        </ul>
+
+        <p>Practice building a complete page layout using both Flexbox and Grid. Start with a header, navigation bar, main content area, sidebar, and footer. Use Flexbox for the header and navigation links, and Grid for the main content and sidebar layout. Test on multiple screen sizes to ensure responsiveness. These exercises will solidify your understanding and prepare you for real-world projects.</p>
+
+        <p>In the next lesson, we will explore JavaScript basics, adding interactivity to your well-structured, beautifully laid-out web pages. Combining HTML, CSS, and JavaScript is the foundation of full stack development, and mastering these three pillars will allow you to create professional, dynamic websites from scratch.</p>
+      </section>
+
+      <!-- Next Lesson Button -->
+      <div class="next-lesson">
+        <a href="lesson4.html">
+          Next Lesson: JavaScript Basics <span class="arrow">→</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FullStack Lessons</p>
+  </footer>
+</body>
+</html>
