@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 14 - CSS Animations & Transitions | FullStack Lessons</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://img.sanishtech.com/u/bab806d4f8ab8698339bec1a89ee9.png">
+
+  <!-- Google AdSense Verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9292514961115879"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Lesson 14: CSS Animations & Transitions</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Lessons</h2>
+      <ul>
+        <li><a href="lesson1.html">Lesson 1: HTML Basics</a></li>
+        <li><a href="lesson2.html">Lesson 2: CSS Basics</a></li>
+        <li><a href="lesson3.html">Lesson 3: Advanced CSS (Flexbox & Grid)</a></li>
+        <li><a href="lesson4.html">Lesson 4: JavaScript Basics</a></li>
+        <li><a href="lesson5.html">Lesson 5: DOM Manipulation</a></li>
+        <li><a href="lesson6.html">Lesson 6: Events & Event Listeners</a></li>
+        <li><a href="lesson7.html">Lesson 7: Functions & Scope</a></li>
+        <li><a href="lesson8.html">Lesson 8: Arrays & Objects</a></li>
+        <li><a href="lesson9.html">Lesson 9: API Requests & Fetch</a></li>
+        <li><a href="lesson10.html">Lesson 10: Async/Await</a></li>
+        <li><a href="lesson11.html">Lesson 11: ES6 Modules</a></li>
+        <li><a href="lesson12.html">Lesson 12: Local Storage & Cookies</a></li>
+        <li><a href="lesson13.html">Lesson 13: Responsive Design</a></li>
+        <li><a href="lesson14.html">Lesson 14: CSS Animations & Transitions</a></li>
+        <li><a href="lesson15.html">Lesson 15: Putting It All Together</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <p>Welcome to Lesson 14! CSS Animations & Transitions allow you to add dynamic visual effects to your websites. Transitions provide smooth changes between property values, while animations give you complete control over keyframes and timing.</p>
+
+        <p>For example, a hover effect with a transition:</p>
+
+        <pre><code>button {
+  background-color: #28a745;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #218838;
+}</code></pre>
+
+        <p>This smoothly changes the background color when the button is hovered over.</p>
+
+        <p>CSS Animations allow more complex sequences using @keyframes:</p>
+
+        <pre><code>@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.box {
+  animation: slideIn 1s ease forwards;
+}</code></pre>
+
+        <p>You can control timing, iteration count, delay, and more. Combining animations with JavaScript enables interactive effects triggered by events.</p>
+
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <p>Animations can enhance UX by guiding attention, showing progress, or providing feedback, but should be used judiciously to avoid overwhelming users or hurting performance.</p>
+
+        <p>Practice exercises include animating menus, buttons, modals, and content sections using transitions and keyframes. Experimenting with easing functions, delays, and loops helps you understand animation flow.</p>
+
+        <p>By the end of this lesson, you should be able to:</p>
+        <ul>
+          <li>Create smooth hover effects with CSS transitions</li>
+          <li>Define keyframe animations for dynamic effects</li>
+          <li>Control animation timing, iteration, and delays</li>
+          <li>Combine CSS animations with JavaScript events</li>
+          <li>Use animations responsibly for a better user experience</li>
+        </ul>
+
+        <p>The final lesson will guide you on putting everything together into a complete full-stack web project.</p>
+      </section>
+
+      <div class="next-lesson">
+        <a href="lesson15.html">
+          Next Lesson: Putting It All Together <span class="arrow">→</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FullStack Lessons</p>
+  </footer>
+</body>
+</html>
