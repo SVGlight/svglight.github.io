@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 15 - Putting It All Together | FullStack Lessons</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://img.sanishtech.com/u/bab806d4f8ab8698339bec1a89ee9.png">
+
+  <!-- Google AdSense Verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9292514961115879"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Lesson 15: Putting It All Together</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Lessons</h2>
+      <ul>
+        <li><a href="lesson1.html">Lesson 1: HTML Basics</a></li>
+        <li><a href="lesson2.html">Lesson 2: CSS Basics</a></li>
+        <li><a href="lesson3.html">Lesson 3: Advanced CSS (Flexbox & Grid)</a></li>
+        <li><a href="lesson4.html">Lesson 4: JavaScript Basics</a></li>
+        <li><a href="lesson5.html">Lesson 5: DOM Manipulation</a></li>
+        <li><a href="lesson6.html">Lesson 6: Events & Event Listeners</a></li>
+        <li><a href="lesson7.html">Lesson 7: Functions & Scope</a></li>
+        <li><a href="lesson8.html">Lesson 8: Arrays & Objects</a></li>
+        <li><a href="lesson9.html">Lesson 9: API Requests & Fetch</a></li>
+        <li><a href="lesson10.html">Lesson 10: Async/Await</a></li>
+        <li><a href="lesson11.html">Lesson 11: ES6 Modules</a></li>
+        <li><a href="lesson12.html">Lesson 12: Local Storage & Cookies</a></li>
+        <li><a href="lesson13.html">Lesson 13: Responsive Design</a></li>
+        <li><a href="lesson14.html">Lesson 14: CSS Animations & Transitions</a></li>
+        <li><a href="lesson15.html">Lesson 15: Putting It All Together</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <p>Welcome to the final lesson! By now, you’ve learned HTML, CSS, JavaScript, advanced CSS techniques, DOM manipulation, events, functions, ES6 modules, local storage, responsive design, and CSS animations. In this lesson, we’ll take all those skills and combine them to build a full-stack-like project structure that runs purely on the front end, which will prepare you for larger projects or actual full-stack work with servers.</p>
+
+        <p>Our project will include:</p>
+        <ul>
+          <li>A responsive layout with sidebar navigation</li>
+          <li>Dynamic content manipulation using JavaScript</li>
+          <li>Data persistence using Local Storage</li>
+          <li>CSS animations for visual polish</li>
+          <li>Modular JavaScript using ES6 modules</li>
+        </ul>
+
+        <p>Step 1: Project Structure</p>
+        <p>Create a folder called <code>fullstack-project</code> and inside it:</p>
+        <ul>
+          <li>index.html</li>
+          <li>style.css</li>
+          <li>js/
+            <ul>
+              <li>main.js</li>
+              <li>modules.js</li>
+            </ul>
+          </li>
+        </ul>
+
+        <p>This structure keeps HTML, CSS, and JS separate while allowing modularity.</p>
+
+        <p>Step 2: HTML Layout</p>
+        <p>We’ll create a container with a sidebar and main content, similar to what we used in lessons 13 and 14:</p>
+
+        <pre><code>&lt;div class="container"&gt;
+  &lt;aside class="sidebar"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/aside&gt;
+
+  &lt;main class="main-content"&gt;
+    &lt;h2&gt;Welcome!&lt;/h2&gt;
+    &lt;p&gt;Dynamic content will appear here.&lt;/p&gt;
+  &lt;/main&gt;
+&lt;/div&gt;</code></pre>
+
+        <p>Step 3: Modular JavaScript</p>
+        <p>Create a <code>modules.js</code> file for reusable functions:</p>
+
+        <pre><code>// modules.js
+export function createCard(title, content) {
+  const card = document.createElement('div');
+  card.className = 'card';
+  card.innerHTML = `&lt;h3&gt;${title}&lt;/h3&gt;&lt;p&gt;${content}&lt;/p&gt;`;
+  return card;
+}</code></pre>
+
+        <p>Then in <code>main.js</code>, import it and dynamically add content:</p>
+
+        <pre><code>// main.js
+import { createCard } from './modules.js';
+
+const container = document.querySelector('.main-content');
+
+const card1 = createCard('Lesson Recap', 'This is a recap of previous lessons.');
+const card2 = createCard('Next Steps', 'Use your skills to build small projects.');
+
+container.appendChild(card1);
+container.appendChild(card2);</code></pre>
+
+        <p>Step 4: Local Storage Integration</p>
+        <p>Let’s save some user preferences. For example, dark mode:</p>
+
+        <pre><code>const toggleDark = document.getElementById('toggle-dark');
+toggleDark.addEventListener('click', () =&gt; {
+  document.body.classList.toggle('dark-mode');
+  localStorage.setItem('darkMode', document.body.classList.contains('dark-mode'));
+});
+
+// On page load
+if (localStorage.getItem('darkMode') === 'true') {
+  document.body.classList.add('dark-mode');
+}</code></pre>
+
+        <p>Step 5: Responsive Design</p>
+        <p>Ensure your layout adjusts for all devices using media queries as in Lesson 13:</p>
+
+        <pre><code>@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    margin-bottom: 20px;
+  }
+}</code></pre>
+
+        <p>Step 6: CSS Animations</p>
+        <p>Animate elements as they appear:</p>
+
+        <pre><code>@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card {
+  animation: fadeIn 1s ease forwards;
+}</code></pre>
+
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <p>Step 7: Putting Everything Together</p>
+        <p>With HTML layout, responsive CSS, modular JS, local storage, and animations, you now have a fully interactive web app that adheres to modern best practices. The sidebar navigation allows easy access to all lessons or project sections, dynamic cards allow you to display content programmatically, and local storage ensures user preferences are preserved.</p>
+
+        <p>Next, enhance your project with real API calls, form handling, and additional interactive components. The key takeaway is understanding how all pieces of web development—HTML, CSS, JavaScript, modules, storage, animations—fit together to create maintainable, scalable projects.</p>
+
+        <p>By completing this lesson, you now have:</p>
+        <ul>
+          <li>Built a modular, organized project structure</li>
+          <li>Implemented responsive layouts for different devices</li>
+          <li>Used JavaScript to dynamically manipulate content</li>
+          <li>Saved and retrieved user preferences using Local Storage</li>
+          <li>Enhanced UX with CSS animations and transitions</li>
+        </ul>
+
+        <p>Congratulations! You now have the foundation to move into real-world full-stack development or continue refining your front-end skills.</p>
+      </section>
+
+      <div class="next-lesson">
+        <a href="../index.html">
+          Return Home <span class="arrow">→</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FullStack Lessons</p>
+  </footer>
+</body>
+</html>
