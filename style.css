@@ -1,0 +1,157 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+header nav a {
+  text-decoration: none;
+  color: #28a745;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto;
+  flex-wrap: wrap;
+}
+
+aside {
+  flex: 1 1 250px;
+  background: #e2e2e2;
+  padding: 20px;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+
+aside h2 {
+  margin-bottom: 10px;
+}
+
+aside ul {
+  list-style: none;
+  padding: 0;
+}
+
+aside ul li {
+  margin-bottom: 10px;
+}
+
+aside ul li a {
+  text-decoration: none;
+  color: #222;
+  font-weight: bold;
+  padding: 6px 10px;
+  display: block;
+  border-radius: 4px;
+  transition: background 0.2s;
+}
+
+aside ul li a:hover {
+  background: #d1d1d1;
+}
+
+main {
+  flex: 3 1 700px;
+  padding: 20px;
+  min-width: 300px;
+}
+
+main h2 {
+  margin-bottom: 10px;
+}
+
+main p {
+  margin-bottom: 15px;
+}
+
+pre {
+  background: #f4f4f4;
+  padding: 10px;
+  overflow-x: auto;
+  border-left: 4px solid #333;
+  margin-bottom: 15px;
+}
+
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #f4f4f4;
+  margin-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+/* Next Lesson Button */
+.next-lesson {
+  margin-top: 40px;
+  text-align: right;
+}
+
+.next-lesson a {
+  display: inline-block;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.next-lesson a:hover {
+  background-color: #218838;
+}
+
+.next-lesson .arrow {
+  margin-left: 10px;
+  font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  aside {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
+
+/* Dark Mode Example */
+body.dark-mode {
+  background: #1e1e1e;
+  color: #f4f4f4;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background: #333;
+  color: #f4f4f4;
+}
+
+body.dark-mode aside {
+  background: #2c2c2c;
+}
