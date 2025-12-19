@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lesson 9 - API Requests & Fetch | FullStack Lessons</title>
+  <link rel="stylesheet" href="../style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://img.sanishtech.com/u/bab806d4f8ab8698330839bec1a89ee9.png">
+
+  <!-- Google AdSense Verification -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9292514961115879"
+     crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>Lesson 9: API Requests & Fetch</h1>
+    <nav>
+      <a href="../index.html">Home</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar">
+      <h2>Lessons</h2>
+      <ul>
+        <li><a href="lesson1.html">Lesson 1: HTML Basics</a></li>
+        <li><a href="lesson2.html">Lesson 2: CSS Basics</a></li>
+        <li><a href="lesson3.html">Lesson 3: Advanced CSS (Flexbox & Grid)</a></li>
+        <li><a href="lesson4.html">Lesson 4: JavaScript Basics</a></li>
+        <li><a href="lesson5.html">Lesson 5: DOM Manipulation</a></li>
+        <li><a href="lesson6.html">Lesson 6: Events & Event Listeners</a></li>
+        <li><a href="lesson7.html">Lesson 7: Functions & Scope</a></li>
+        <li><a href="lesson8.html">Lesson 8: Arrays & Objects</a></li>
+        <li><a href="lesson9.html">Lesson 9: API Requests & Fetch</a></li>
+        <li><a href="lesson10.html">Lesson 10: Async/Await</a></li>
+        <li><a href="lesson11.html">Lesson 11: ES6 Modules</a></li>
+        <li><a href="lesson12.html">Lesson 12: Local Storage & Cookies</a></li>
+        <li><a href="lesson13.html">Lesson 13: Responsive Design</a></li>
+        <li><a href="lesson14.html">Lesson 14: CSS Animations & Transitions</a></li>
+        <li><a href="lesson15.html">Lesson 15: Putting It All Together</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <section>
+        <p>Welcome to Lesson 9! APIs (Application Programming Interfaces) are bridges between your web application and external services, allowing your site to request data from servers and receive responses in a structured way. The most common modern approach for interacting with APIs in JavaScript is the <strong>Fetch API</strong>.</p>
+
+        <p>The Fetch API is built into modern browsers and provides a simple interface to make HTTP requests. It returns a <code>Promise</code> that resolves to a <code>Response</code> object, which can then be converted into JSON or text.</p>
+
+        <p>Basic usage of <code>fetch()</code> looks like this:</p>
+
+        <pre><code>fetch("https://api.example.com/data")
+  .then(response =&gt; response.json())
+  .then(data =&gt; console.log(data))
+  .catch(error =&gt; console.error("Error:", error));</code></pre>
+
+        <p>Here’s a breakdown of what happens:</p>
+        <ul>
+          <li>The <code>fetch</code> function requests data from the URL.</li>
+          <li>The <code>response.json()</code> method parses the returned JSON into a JavaScript object.</li>
+          <li>The <code>then()</code> method is called with the parsed data, allowing you to use it in your application.</li>
+          <li><code>catch()</code> handles any errors that occur during the request.</li>
+        </ul>
+
+        <p>You can also make POST requests, sending data to a server:</p>
+
+        <pre><code>fetch("https://api.example.com/users", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({name: "Alice", age: 25})
+})
+.then(response =&gt; response.json())
+.then(data =&gt; console.log(data))
+.catch(error =&gt; console.error("Error:", error));</code></pre>
+
+        <p>Handling headers, authentication tokens, and query parameters are also possible using fetch options. For example, including a Bearer token for authorization:</p>
+
+        <pre><code>fetch("https://api.example.com/data", {
+  headers: {
+    "Authorization": "Bearer YOUR_TOKEN_HERE"
+  }
+});</code></pre>
+
+        <p>Fetching APIs allows your site to dynamically display data, such as weather updates, news, user information, or products from an e-commerce database. You can then manipulate the DOM to render this data for the user.</p>
+
+        <p>Example: dynamically generating a list of users:</p>
+
+        <pre><code>fetch("https://api.example.com/users")
+  .then(response =&gt; response.json())
+  .then(users =&gt; {
+    const list = document.createElement("ul");
+    users.forEach(user =&gt; {
+      const li = document.createElement("li");
+      li.textContent = user.name;
+      list.appendChild(li);
+    });
+    document.body.appendChild(list);
+  });</code></pre>
+
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+        <p>By learning to work with APIs, your websites can now fetch live data, making them more dynamic and user-friendly. It’s a major step toward building real-world applications, such as dashboards, feeds, or interactive services.</p>
+
+        <p>Next, we will build on this concept with <strong>Async/Await</strong>, which makes working with asynchronous API calls easier and more readable.</p>
+      </section>
+
+      <div class="next-lesson">
+        <a href="lesson10.html">
+          Next Lesson: Async/Await <span class="arrow">→</span>
+        </a>
+      </div>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 FullStack Lessons</p>
+  </footer>
+</body>
+</html>
