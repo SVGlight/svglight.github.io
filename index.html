@@ -1,180 +1,330 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nightfall Casino — Demo</title>
-
-<link rel="stylesheet" href="style.css">
-
-<meta name="description" content="Nightfall Casino is a fake-money demo casino for educational and entertainment purposes only. No real gambling.">
-<meta name="theme-color" content="#0b0c10">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Nightfall Casino</title>
+<!-- Google Fonts for a modern font style -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<div id="app">
-
-<header id="topbar">
-<div class="top-left">
-<div class="logo">
-<span class="logo-icon">♠</span>
-<span class="logo-text">Nightfall</span>
-</div>
-</div>
-
-<div class="top-right">
-<div class="wallet">
-<span class="wallet-label">Balance</span>
-<span class="wallet-amount" id="balanceDisplay">$0.00</span>
-<button class="wallet-add" id="openWalletModal">Add</button>
-</div>
-
-<button class="theme-toggle" id="themeToggle">
-<span class="theme-icon">☾</span>
-</button>
+<!-- HEADER with logo, user profile, theme toggle -->
+<header class="header">
+<div class="container header-container">
+  <!-- Logo and Tagline -->
+  <div class="logo-section">
+    <h1 class="logo">Nightfall Casino</h1>
+    <p class="tagline">Your ultimate fake casino experience</p>
+  </div>
+  <!-- User Profile & Wallet -->
+  <div class="user-wallet">
+    <!-- Profile info with avatar upload -->
+    <div class="profile-section">
+      <img src="https://via.placeholder.com/50" alt="User Avatar" class="avatar" id="userAvatar" />
+      <div class="profile-details">
+        <span class="username" id="userNameDisplay">Guest</span>
+        <button class="btn small" id="editProfileBtn">Edit Profile</button>
+        <button class="btn small" id="logoutBtn" style="display:none;">Logout</button>
+      </div>
+    </div>
+    <!-- Wallet and balance -->
+    <div class="wallet-info">
+      <div class="balance-display">
+        <span id="balance">Balance: 0</span>
+      </div>
+      <div class="add-money">
+        <input type="number" id="addAmount" placeholder="Amount" min="1" />
+        <button class="btn" id="addMoneyBtn">Add Funds</button>
+        <button class="btn small" id="resetBalanceBtn">Reset Balance</button>
+      </div>
+    </div>
+    <!-- Quick Actions: Bet, Auto-Add, Feedback -->
+    <div class="quick-actions">
+      <button class="btn small" id="quickBetBtn">Quick Bet 100</button>
+      <button class="btn small" id="autoAddBtn">Auto-Add +10/sec</button>
+      <button class="btn small" id="showFeedbackBtn">Feedback</button>
+    </div>
+    <!-- Theme toggle switch -->
+    <div class="theme-toggle">
+      <label class="switch">
+        <input type="checkbox" id="themeSwitch" />
+        <span class="slider round"></span>
+      </label>
+      <span class="theme-label">Dark Mode</span>
+    </div>
+  </div>
 </div>
 </header>
 
-<div id="layout">
-
-<aside id="sidebar">
-<nav class="nav">
-<div class="nav-section">
-<div class="nav-title">Casino</div>
-<a href="crash.html" class="nav-link">Crash</a>
-<a href="mines.html" class="nav-link">Mines</a>
-<a href="plinko.html" class="nav-link">Plinko</a>
-<a href="chicken.html" class="nav-link">Chicken</a>
-<a href="pump.html" class="nav-link">Pump</a>
-</div>
-
-<div class="nav-section">
-<div class="nav-title">Table Games</div>
-<a href="blackjack.html" class="nav-link">Blackjack</a>
-<a href="poker.html" class="nav-link">Texas Hold’em</a>
-<a href="roulette.html" class="nav-link">Roulette</a>
-<a href="craps.html" class="nav-link">Craps</a>
-</div>
-
-<div class="nav-section">
-<div class="nav-title">Info</div>
-<a href="#" class="nav-link disabled">Demo Only</a>
-<a href="#" class="nav-link disabled">No Real Money</a>
+<!-- Navigation Menu -->
+<nav class="navigation">
+<div class="container nav-container">
+  <ul class="nav-menu">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="mines.html">Mines</a></li>
+    <li><a href="crash.html">Crash</a></li>
+    <li><a href="blackjack.html">Blackjack</a></li>
+    <li><a href="poker.html">Poker</a></li>
+    <li><a href="craps.html">Craps</a></li>
+    <li><a href="roulette.html">Roulette</a></li>
+    <li><a href="plinko.html">Plinko</a></li>
+    <li><a href="chicken.html">Chicken</a></li>
+    <li><a href="pump.html">Pump</a></li>
+  </ul>
 </div>
 </nav>
-</aside>
 
-<main id="content">
-
-<section class="hero">
-<div class="hero-text">
-<h1>Nightfall Casino</h1>
-<p>
-A fake-money casino simulator built for fun, learning, and UI experimentation.
-No real gambling. No accounts. No payments.
-</p>
+<!-- Main Content Area -->
+<main class="main-content">
+<!-- Welcome & Overview -->
+<section class="welcome-section">
+<div class="container">
+<h2>Welcome to Nightfall Casino</h2>
+<p>Enjoy our collection of fun and interactive fake casino games. Use your fake balance to explore, gamble, and have fun! No real money involved.</p>
+<div class="stats-overview">
+  <div class="stat-card">
+    <h3>Total Games</h3>
+    <p>10+ games available</p>
+  </div>
+  <div class="stat-card">
+    <h3>Your Balance</h3>
+    <p id="balance-overview">0</p>
+  </div>
+  <div class="stat-card">
+    <h3>Recent Wins</h3>
+    <p id="recentWins">None yet</p>
+  </div>
+</div>
 </div>
 </section>
 
-<section class="games-grid">
-
-<div class="game-card">
-<div class="game-title">Crash</div>
-<div class="game-desc">
-Cash out before it crashes. Multipliers rise until they don’t.
+<!-- Quick Actions & Tips Carousel -->
+<section class="quick-tips-section">
+<div class="container">
+<h2>Quick Actions & Tips</h2>
+<div class="actions-tips-wrapper">
+  <!-- Quick Bet -->
+  <button class="btn" id="quickBet100Btn">Bet 100 (Quick)</button>
+  <!-- Auto-Add toggle -->
+  <button class="btn" id="autoAddToggleBtn">Start Auto-Add +10/sec</button>
+  <!-- Reset Balance -->
+  <button class="btn" id="resetBalanceMainBtn">Reset Balance</button>
+  <!-- Feedback Button -->
+  <button class="btn" id="feedbackBtn">Provide Feedback</button>
 </div>
-<a href="crash.html" class="game-play">Play</a>
+<!-- Tips Carousel -->
+<div class="tips-carousel">
+  <div class="tips-slide active" id="tip1">
+    <h3>Start Small</h3>
+    <p>Begin with small bets and enjoy the process. Increase gradually!</p>
+  </div>
+  <div class="tips-slide" id="tip2">
+    <h3>Manage Funds</h3>
+    <p>Set your own limits. Don't bet more than you can afford to lose.</p>
+  </div>
+  <div class="tips-slide" id="tip3">
+    <h3>Explore All</h3>
+    <p>Try different games to find your favorite. Have fun experimenting!</p>
+  </div>
 </div>
-
-<div class="game-card">
-<div class="game-title">Mines</div>
-<div class="game-desc">
-Pick tiles, avoid mines, increase your multiplier.
+<button class="btn small" id="nextTipBtn">Next Tip</button>
 </div>
-<a href="mines.html" class="game-play">Play</a>
-</div>
-
-<div class="game-card">
-<div class="game-title">Plinko</div>
-<div class="game-desc">
-Drop the ball and let probability decide your fate.
-</div>
-<a href="plinko.html" class="game-play">Play</a>
-</div>
-
-<div class="game-card">
-<div class="game-title">Chicken</div>
-<div class="game-desc">
-Keep crossing the road… or cash out before you get hit.
-</div>
-<a href="chicken.html" class="game-play">Play</a>
-</div>
-
-<div class="game-card">
-<div class="game-title">Pump</div>
-<div class="game-desc">
-Pump your multiplier higher — but don’t let it pop.
-</div>
-<a href="pump.html" class="game-play">Play</a>
-</div>
-
-<div class="game-card">
-<div class="game-title">Blackjack</div>
-<div class="game-desc">
-Classic 21 against the dealer.
-</div>
-<a href="blackjack.html" class="game-play">Play</a>
-</div>
-
-<div class="game-card">
-<div class="game-title">Texas Hold’em</div>
-<div class="game-desc">
-Demo poker with community cards and simple AI.
-</div>
-<a href="poker.html" class="game-play">Play</a>
-</div>
-
-<div class="game-card">
-<div class="game-title">Roulette</div>
-<div class="game-desc">
-Red or black? Even or odd? Spin the wheel.
-</div>
-<a href="roulette.html" class="game-play">Play</a>
-</div>
-
-<div class="game-card">
-<div class="game-title">Craps</div>
-<div class="game-desc">
-Roll the dice and test your luck.
-</div>
-<a href="craps.html" class="game-play">Play</a>
-</div>
-
 </section>
 
-<footer class="footer">
-<p>
-Nightfall Casino is a demo project. All balances are fake. No real gambling.
-</p>
-</footer>
-
-</main>
+<!-- Announcements & News -->
+<section class="announcement-section">
+<div class="container">
+<h2>Latest Announcements</h2>
+<p>New game coming soon! Stay tuned for updates and enjoy your experience.</p>
 </div>
-</div>
+</section>
 
-<div id="walletModal" class="modal hidden">
+<!-- Feedback Modal -->
+<div id="feedbackModal" class="modal">
 <div class="modal-content">
-<h2>Add Fake Money</h2>
-<input type="number" id="addAmount" placeholder="Enter amount">
-<div class="modal-actions">
-<button id="addBalanceConfirm">Add</button>
-<button id="closeWalletModal">Cancel</button>
-</div>
+<span class="close" id="closeFeedback">&times;</span>
+<h2>We value your feedback!</h2>
+<form id="feedbackForm">
+<label for="feedbackText">Your Suggestions:</label>
+<textarea id="feedbackText" rows="4" placeholder="Share your ideas..."></textarea>
+<button class="btn" type="submit">Submit</button>
+</form>
 </div>
 </div>
 
-<script src="script.js"></script>
+<!-- Achievements Modal -->
+<div id="achieveModal" class="modal">
+<div class="modal-content">
+<span class="close" id="closeAchieve">&times;</span>
+<h2>Achievements</h2>
+<ul>
+<li>First Bet Made!</li>
+<li>Balance Reached 1000!</li>
+<li>Played 10 Games!</li>
+</ul>
+</div>
+</div>
 
+<!-- Hidden debug/info panel (for developer use) -->
+<div class="debug-panel" id="debugPanel" style="display:none;">
+<h4>Debug Info</h4>
+<p>Balance: <span id="debugBalance">0</span></p>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="container footer-container">
+<p>&copy; 2024 Nightfall Casino. All rights reserved.</p>
+<div class="social-icons">
+<a href="#"><img src="images/facebook_icon.png" alt="Facebook" /></a>
+<a href="#"><img src="images/twitter_icon.png" alt="Twitter" /></a>
+<a href="#"><img src="images/discord_icon.png" alt="Discord" /></a>
+</div>
+</div>
+</footer>
+</main>
+
+<!-- Scripts for interactivity -->
+<script>
+// Initialize variables
+const defaultBalance = parseInt(localStorage.getItem('balance')) || 0;
+let currentBalance = defaultBalance;
+let autoAdding = false;
+let autoAddInterval = null;
+let currentTipIndex = 0;
+const tips = [
+  "Start small and enjoy the process.",
+  "Manage your funds wisely.",
+  "Explore all games for fun."
+];
+
+// Update balance display
+function updateBalance() {
+  document.getElementById('balance').innerText = 'Balance: ' + currentBalance;
+  document.getElementById('balance-overview').innerText = currentBalance;
+  document.getElementById('debugBalance').innerText = currentBalance;
+}
+updateBalance();
+
+// Add funds
+document.getElementById('addMoneyBtn').addEventListener('click', () => {
+  const amount = parseInt(document.getElementById('addAmount').value);
+  if(amount && amount > 0){
+    currentBalance += amount;
+    localStorage.setItem('balance', currentBalance);
+    updateBalance();
+    addActivity(`Added ${amount} fake dollars.`);
+    document.getElementById('addAmount').value = '';
+  }
+});
+
+// Reset balance
+document.getElementById('resetBalanceBtn').addEventListener('click', () => {
+  currentBalance = 0;
+  localStorage.setItem('balance', currentBalance);
+  updateBalance();
+  addActivity('Balance reset to 0.');
+});
+
+// Quick Bet 100
+document.getElementById('quickBetBtn').addEventListener('click', () => {
+  if(currentBalance >= 100){
+    currentBalance -= 100;
+    localStorage.setItem('balance', currentBalance);
+    updateBalance();
+    addActivity('Placed a quick bet of 100.');
+  } else {
+    alert('Not enough balance.');
+  }
+});
+
+// Auto-Add toggle
+document.getElementById('autoAddToggleBtn').addEventListener('click', () => {
+  if(autoAdding){
+    clearInterval(autoAddInterval);
+    autoAdding = false;
+    document.getElementById('autoAddToggleBtn').innerText = 'Start Auto-Add +10/sec';
+  } else {
+    autoAddInterval = setInterval(() => {
+      currentBalance += 10;
+      localStorage.setItem('balance', currentBalance);
+      updateBalance();
+      addActivity('Auto-added 10 fake dollars.');
+    }, 1000);
+    autoAdding = true;
+    document.getElementById('autoAddToggleBtn').innerText = 'Stop Auto-Add';
+  }
+});
+
+// Next tip button
+document.getElementById('nextTipBtn').addEventListener('click', () => {
+  document.querySelectorAll('.tips-slide').forEach((slide, index) => {
+    slide.classList.toggle('active', index === (currentTipIndex + 1) % tips.length);
+  });
+  currentTipIndex = (currentTipIndex + 1) % tips.length;
+});
+
+// Theme toggle
+document.getElementById('themeSwitch').addEventListener('change', (e) => {
+  document.body.classList.toggle('dark-mode', e.target.checked);
+});
+
+// Avatar upload
+document.getElementById('userAvatar').addEventListener('click', () => {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = 'image/*';
+  input.onchange = () => {
+    const file = input.files[0];
+    const reader = new FileReader();
+    reader.onload = () => {
+      document.getElementById('userAvatar').src = reader.result;
+    };
+    reader.readAsDataURL(file);
+  };
+  input.click();
+});
+
+// Activity log
+function addActivity(text) {
+  const log = document.getElementById('activityLog');
+  const item = document.createElement('div');
+  item.className = 'activity-item';
+  item.innerText = `[${new Date().toLocaleTimeString()}] ${text}`;
+  log.prepend(item);
+  if(log.children.length > 15) log.removeChild(log.lastChild);
+}
+
+// Show achievements modal
+const achieveModal = document.getElementById('achieveModal');
+document.getElementById('closeAchieve').onclick = () => { achieveModal.style.display = 'none'; };
+// Show achievement after certain actions (example)
+setTimeout(() => { document.getElementById('achieveModal').style.display = 'block'; }, 5000);
+
+// Feedback modal
+const feedbackModal = document.getElementById('feedbackModal');
+document.getElementById('feedbackBtn').onclick = () => { feedbackModal.style.display = 'block'; };
+document.getElementById('closeFeedback').onclick = () => { feedbackModal.style.display = 'none'; };
+window.onclick = (event) => {
+  if(event.target == feedbackModal) feedbackModal.style.display = 'none';
+};
+// Submit feedback
+document.getElementById('feedbackForm').onsubmit = (e) => {
+  e.preventDefault();
+  alert('Thank you for your feedback!');
+  document.getElementById('feedbackForm').reset();
+  feedbackModal.style.display = 'none';
+};
+
+// Debug info toggle (for developer)
+document.addEventListener('keydown', (e) => {
+  if(e.key === 'd'){
+    document.getElementById('debugPanel').style.display = 'block';
+  }
+});
+</script>
 </body>
 </html>
