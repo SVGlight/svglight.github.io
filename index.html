@@ -1,87 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Casino Games Hub</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nightfall Casino — Demo</title>
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="description" content="Nightfall Casino is a fake-money demo casino for educational and entertainment purposes only. No real gambling.">
+<meta name="theme-color" content="#0b0c10">
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1>🎰 Casino Games Hub</h1>
-            <div class="header-controls">
-                <div class="balance">Balance: $<span id="balance">1000</span></div>
-                <button id="addMoneyBtn" class="btn-secondary">💰 Add Money</button>
-                <button id="themeToggle" class="theme-toggle">🌙</button>
-            </div>
-        </div>
-    </header>
 
-    <main class="container">
-        <section class="games-section">
-            <h2>🎲 Original Games</h2>
-            <div class="games-grid">
-                <a href="mines.html" class="game-card">
-                    <div class="game-icon">💣</div>
-                    <h3>Mines</h3>
-                    <p>Find diamonds, avoid mines</p>
-                </a>
-                <a href="crash.html" class="game-card">
-                    <div class="game-icon">🚀</div>
-                    <h3>Crash</h3>
-                    <p>Cash out before the crash</p>
-                </a>
-                <a href="plinko.html" class="game-card">
-                    <div class="game-icon">⚪</div>
-                    <h3>Plinko</h3>
-                    <p>Drop and win big</p>
-                </a>
-                <a href="chicken.html" class="game-card">
-                    <div class="game-icon">🐔</div>
-                    <h3>Chicken</h3>
-                    <p>Pick bones, avoid chickens</p>
-                </a>
-            </div>
-        </section>
+<div id="app">
 
-        <section class="games-section">
-            <h2>🃏 Table Games</h2>
-            <div class="games-grid">
-                <a href="blackjack.html" class="game-card">
-                    <div class="game-icon">🂡</div>
-                    <h3>Blackjack</h3>
-                    <p>Beat the dealer to 21</p>
-                </a>
-                <a href="poker.html" class="game-card">
-                    <div class="game-icon">♠️</div>
-                    <h3>Texas Hold'em</h3>
-                    <p>Poker showdown</p>
-                </a>
-                <a href="roulette.html" class="game-card">
-                    <div class="game-icon">🎡</div>
-                    <h3>Roulette</h3>
-                    <p>Spin to win</p>
-                </a>
-                <a href="craps.html" class="game-card">
-                    <div class="game-icon">🎲</div>
-                    <h3>Craps</h3>
-                    <p>Roll the dice</p>
-                </a>
-            </div>
-        </section>
-    </main>
+<header id="topbar">
+<div class="top-left">
+<div class="logo">
+<span class="logo-icon">♠</span>
+<span class="logo-text">Nightfall</span>
+</div>
+</div>
 
-    <!-- Add Money Modal -->
-    <div id="addMoneyModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Add Money</h2>
-            <input type="number" id="moneyAmount" placeholder="Enter amount" min="1">
-            <button id="confirmAddMoney" class="btn-primary">Add Funds</button>
-        </div>
-    </div>
+<div class="top-right">
+<div class="wallet">
+<span class="wallet-label">Balance</span>
+<span class="wallet-amount" id="balanceDisplay">$0.00</span>
+<button class="wallet-add" id="openWalletModal">Add</button>
+</div>
 
-    <script src="script.js"></script>
+<button class="theme-toggle" id="themeToggle">
+<span class="theme-icon">☾</span>
+</button>
+</div>
+</header>
+
+<div id="layout">
+
+<aside id="sidebar">
+<nav class="nav">
+<div class="nav-section">
+<div class="nav-title">Casino</div>
+<a href="crash.html" class="nav-link">Crash</a>
+<a href="mines.html" class="nav-link">Mines</a>
+<a href="plinko.html" class="nav-link">Plinko</a>
+<a href="chicken.html" class="nav-link">Chicken</a>
+<a href="pump.html" class="nav-link">Pump</a>
+</div>
+
+<div class="nav-section">
+<div class="nav-title">Table Games</div>
+<a href="blackjack.html" class="nav-link">Blackjack</a>
+<a href="poker.html" class="nav-link">Texas Hold’em</a>
+<a href="roulette.html" class="nav-link">Roulette</a>
+<a href="craps.html" class="nav-link">Craps</a>
+</div>
+
+<div class="nav-section">
+<div class="nav-title">Info</div>
+<a href="#" class="nav-link disabled">Demo Only</a>
+<a href="#" class="nav-link disabled">No Real Money</a>
+</div>
+</nav>
+</aside>
+
+<main id="content">
+
+<section class="hero">
+<div class="hero-text">
+<h1>Nightfall Casino</h1>
+<p>
+A fake-money casino simulator built for fun, learning, and UI experimentation.
+No real gambling. No accounts. No payments.
+</p>
+</div>
+</section>
+
+<section class="games-grid">
+
+<div class="game-card">
+<div class="game-title">Crash</div>
+<div class="game-desc">
+Cash out before it crashes. Multipliers rise until they don’t.
+</div>
+<a href="crash.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Mines</div>
+<div class="game-desc">
+Pick tiles, avoid mines, increase your multiplier.
+</div>
+<a href="mines.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Plinko</div>
+<div class="game-desc">
+Drop the ball and let probability decide your fate.
+</div>
+<a href="plinko.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Chicken</div>
+<div class="game-desc">
+Keep crossing the road… or cash out before you get hit.
+</div>
+<a href="chicken.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Pump</div>
+<div class="game-desc">
+Pump your multiplier higher — but don’t let it pop.
+</div>
+<a href="pump.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Blackjack</div>
+<div class="game-desc">
+Classic 21 against the dealer.
+</div>
+<a href="blackjack.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Texas Hold’em</div>
+<div class="game-desc">
+Demo poker with community cards and simple AI.
+</div>
+<a href="poker.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Roulette</div>
+<div class="game-desc">
+Red or black? Even or odd? Spin the wheel.
+</div>
+<a href="roulette.html" class="game-play">Play</a>
+</div>
+
+<div class="game-card">
+<div class="game-title">Craps</div>
+<div class="game-desc">
+Roll the dice and test your luck.
+</div>
+<a href="craps.html" class="game-play">Play</a>
+</div>
+
+</section>
+
+<footer class="footer">
+<p>
+Nightfall Casino is a demo project. All balances are fake. No real gambling.
+</p>
+</footer>
+
+</main>
+</div>
+</div>
+
+<div id="walletModal" class="modal hidden">
+<div class="modal-content">
+<h2>Add Fake Money</h2>
+<input type="number" id="addAmount" placeholder="Enter amount">
+<div class="modal-actions">
+<button id="addBalanceConfirm">Add</button>
+<button id="closeWalletModal">Cancel</button>
+</div>
+</div>
+</div>
+
+<script src="script.js"></script>
+
 </body>
 </html>
